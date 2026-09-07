@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#0f766e" />
+
+    <title>Hash Generator — MD5, SHA-1, SHA-256, SHA-512 online</title>
+    <meta
+      name="description"
+      content="Generate MD5, SHA-1, SHA-256, SHA-384, SHA-512 and CRC32 hashes of any text or file. Live as you type, hex or Base64 output, HMAC, and a compare box. Runs entirely in your browser — nothing is uploaded and it works offline."
+    />
+    <link rel="canonical" href="https://hash-generator.correia95.workers.dev/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Hash Generator" />
+    <meta property="og:description" content="MD5, SHA-1, SHA-256, SHA-512 and CRC32 of any text or file — live, hex or Base64, HMAC, compare. Client-side, no sign-up." />
+    <meta property="og:url" content="https://hash-generator.correia95.workers.dev/" />
+    <meta property="og:image" content="https://hash-generator.correia95.workers.dev/og.svg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Hash Generator" />
+    <meta name="twitter:description" content="MD5, SHA-1, SHA-256, SHA-512 and CRC32 of any text or file — live, hex or Base64, HMAC, compare. Client-side." />
+    <meta name="twitter:image" content="https://hash-generator.correia95.workers.dev/og.svg" />
+
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Hash Generator",
+        "url": "https://hash-generator.correia95.workers.dev/",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "Any",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "description": "Compute MD5, SHA-1, SHA-256, SHA-384, SHA-512 and CRC32 digests of text or a file in the browser, with hex or Base64 output, HMAC and hash comparison."
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is a hash used for?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A hash turns any input into a fixed-length fingerprint. The same input always produces the same digest and any change produces a different one, so hashes are used to check that a download or message is intact, to index content, and to store passwords when combined with a salt."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Which hash algorithm should I use?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Use SHA-256 for anything security-related. MD5 and SHA-1 are broken against deliberate collisions and should only be used for legacy interoperability or to detect accidental corruption. CRC32 is a checksum, not a secure hash."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is my text or file sent to a server?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. The SHA algorithms run through the browser's built-in Web Crypto API and MD5 and CRC32 run in local code. A file you choose is read into memory and never uploaded. The page works offline once loaded."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can a hash be reversed to get the original text?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Hashing is one-way. Recovering an input means guessing values until one produces the same hash, which is only feasible for short or common inputs."
+            }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <noscript>
+      <p style="text-align: center; padding: 20px">
+        This hash generator needs JavaScript. It computes MD5, SHA-1, SHA-256, SHA-384, SHA-512 and
+        CRC32 digests of text or a file, entirely in your browser.
+      </p>
+    </noscript>
+  </body>
+</html>
